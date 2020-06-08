@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "294299325089",
+    "firebase_url": "https://leadmarkt-28cb3.firebaseio.com",
+    "project_id": "leadmarkt-28cb3",
+    "storage_bucket": "leadmarkt-28cb3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:294299325089:android:6bbd4f578099c0b74816e0",
+        "android_client_info": {
+          "package_name": "com.leadmarkt.leadmarkt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "294299325089-2705o8qrm67cjqqnfhooubt32ceg8fh3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-qaaH7uCKMLpBO3HWpq1_iLMCiP0LD5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "294299325089-2705o8qrm67cjqqnfhooubt32ceg8fh3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

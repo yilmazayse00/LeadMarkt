@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".ProductActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/notFound"
+        android:layout_width="303dp"
+        android:layout_height="303dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_loop="true"
+        app:lottie_speed="0.5" />
+
+    <TextView
+        android:id="@+id/nfText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/notFound"
+        app:layout_constraintStart_toStartOf="@+id/notFound"
+        app:layout_constraintTop_toBottomOf="@+id/notFound" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="95dp"
+        android:layout_height="139dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <TextView
+        android:id="@+id/barcodeTextView"
+        android:layout_width="386dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="221dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="157dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="4dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="@+id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="386dp"
+        android:layout_height="491dp"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <RatingBar
+        android:id="@+id/rBar"
+        android:layout_width="240dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_rb"
+        android:numStars="5"
+        android:progressTint="#FFFFFF"
+        android:stepSize="0.1"
+        app:layout_constraintEnd_toEndOf="@+id/priceTextView"
+        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintStart_toStartOf="@+id/priceTextView"
+        app:layout_constraintTop_toBottomOf="@+id/priceTextView" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="45dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/ic_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toEndOf="@+id/rBar"
+        app:layout_constraintTop_toBottomOf="@+id/favButton" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/favButton"
+        android:layout_width="86dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="8dp"
+        android:onClick="addFav"
+        app:layout_constraintBottom_toTopOf="@+id/rBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/priceTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:lottie_speed="2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="392dp"
+        android:layout_height="58dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.256"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:layout_constraintVertical_bias="0.105">
+
+        <EditText
+            android:id="@+id/commentEditText"
+            android:layout_width="341dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_stroke"
+            android:ems="10"
+            android:hint="Yorum yaz..."
+            android:inputType="textPersonName"
+            android:onClick="addComment"
+            android:paddingStart="10dp"
+            android:shadowColor="#000000" />
+
+        <Button
+            android:id="@+id/commentButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_insert_comment_black_24dp"
+            android:onClick="addComment" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
