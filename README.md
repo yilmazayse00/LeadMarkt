@@ -1,3 +1,5 @@
 # LeadMarkt
 
-Proje sunumu : https://bit.ly/2YiLGXL
+Proje sunumu : bit.ly/2YiLGXL
+
+Python bot : github.com/yilmazayse00/BeautifulSoup
